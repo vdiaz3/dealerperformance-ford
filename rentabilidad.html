@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ford.com - Dealer Performance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="font/iconsmind-s/css/iconsminds.css" />
+    <link rel="stylesheet" href="font/simple-line-icons/css/simple-line-icons.css" />
+
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.rtl.only.min.css" />
+    <link rel="stylesheet" href="css/vendor/fullcalendar.min.css" />
+    <link rel="stylesheet" href="css/vendor/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="css/vendor/datatables.responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" href="css/vendor/select2.min.css" />
+    <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="css/vendor/glide.core.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+    <link rel="stylesheet" href="css/vendor/nouislider.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-tagsinput.css" />
+    <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
+    <link rel="stylesheet" href="css/vendor/nouislider.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+    <link rel="stylesheet" href="css/vendor/cropper.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body id="app-container" class="menu-hidden show-spinner">
+    <nav class="navbar">
+        <div class="d-flex align-items-center navbar-left">
+            <a href="#" class="menu-button d-none d-md-block">
+                <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                    <rect x="0.48" y="0.5" width="7" height="1" />
+                    <rect x="0.48" y="7.5" width="7" height="1" />
+                    <rect x="0.48" y="15.5" width="7" height="1" />
+                </svg>
+                <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                    <rect x="1.56" y="0.5" width="16" height="1" />
+                    <rect x="1.56" y="7.5" width="16" height="1" />
+                    <rect x="1.56" y="15.5" width="16" height="1" />
+                </svg>
+            </a>
+
+            <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+                    <rect x="0.5" y="0.5" width="25" height="1" />
+                    <rect x="0.5" y="7.5" width="25" height="1" />
+                    <rect x="0.5" y="15.5" width="25" height="1" />
+                </svg>
+            </a>
+
+            <div id="logo_pagina" style="display: inline;" >
+               <img src="img/logo_rentabilidad.png" height="45px"> 
+            </div>
+     
+        </div>
+
+        <div class="navbar-right">
+             
+              
+            
+             
+                <a class="navbar-logo" href="Dashboard.Default.html">
+                    <span class="logo d-none d-xs-block"></span>
+                    <span class="logo-mobile d-block d-xs-none"></span>
+                </a> 
+              
+             
+
+     
+
+        </div>
+    </nav>
+   
+    <div class="menu">
+        <div class="main-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li class="active">
+                        <a href="#dashboard">
+                            <i class="iconsminds-shop-4"></i>
+                            <span>Desempeño General</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#layouts">
+                            <i class="iconsminds-digital-drawing"></i> Ventas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#applications">
+                            <i class="iconsminds-air-balloon-1"></i> Prospección
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ui">
+                            <i class="iconsminds-pantone"></i> Servicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#menu">
+                            <i class="iconsminds-three-arrow-fork"></i> Rentabilidad
+                        </a>
+                    </li>
+                 
+                  
+                </ul>
+            </div>
+        </div>
+
+        <div class="sub-menu">
+            <div class="scroll">
+                <ul class="list-unstyled" data-link="dashboard">
+                    <li class="active">
+                        <a href="Dashboard.Default.html#vdvn">
+                            <span class="d-inline-block">Ventas de Vehículos Nuevos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Ford Credit</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <span class="d-inline-block">Absorción del Objetivo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Cancelación de Ventas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Total de Ventas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Inventario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Postventa</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Participación de Mercado</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Rentabilidad  FBMI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Ecosistema Digital</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="layouts" id="layouts">
+                    <li>
+                        <a href="ventas.html#vdvn">
+                            <span class="d-inline-block">Ventas de Vehículos Nuevos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ventas.html#vdpd">
+                            <span class="d-inline-block">Ventas Diarias por Distribuidor</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ventas.html#cvp">
+                            <span class="d-inline-block">Perspectiva del Clientes de Ventas y la Experiencia del Consumidor</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ventas.html#dv">
+                            <span class="d-inline-block">Detalle de Ventas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ventas.html#i">
+                            <span class="d-inline-block">Inventario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ventas.html#vdn2">
+                            <span class="d-inline-block">Venta de Vehículos Nuevos</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" data-link="applications">
+                    <li>
+                        <a href="prospeccion.html#tcpc">
+                            <span class="d-inline-block">Tasa de Conversión de posibles clientes</span>
+                        </a>
+                    </li>
+                   
+                </ul>
+                <ul class="list-unstyled" data-link="ui">
+                   
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Desempeño de Servicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">CVP Servicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Absorción de Postventa</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Desempeño de refacciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Detalle del Asesor de Servicio</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled" data-link="menu" id="menuTypes">
+                    <li>
+                        <a href="rentabilidad.html#r">
+                            <span class="d-inline-block">Rentabilidad</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Tendencia ROS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Tendencia de Capital de Trabajo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Ventas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Utilidad Bruta</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Utilidad Antes de Impuestos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Gastos Fijos Totales</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Gastos de Ventas Totales</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="d-inline-block">Otros Ingresos / Gastos</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <main>
+     
+        <div class="container-fluid">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>Fecha Consulta</label>
+                            <div class="input-group date">
+                                <input type="text" class="form-control">
+                                <span class="input-group-text input-group-append input-group-addon">
+                                    <i class="simple-icon-calendar"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Nivel</label>
+                            <select class="form-control " data-width="100%">
+                                    <option value="AK">Mercado</option>
+                                    <option value="AK">Distrito</option>
+                                    <option value="HI">Nacional</option>
+                               
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Búsqueda</label>
+                            <select class="form-control select2-single" data-width="100%">
+                                    <option value="AK">M1019 - Dimotors Coatzacoalcos</option>
+                                    <option value="AK">M1020 - Distrimotor San Angel</option>
+                            </select>
+                        </div>
+
+                      
+                    </div>
+
+                    <div class="col-12" style="text-align: left;">
+
+                        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                           
+                              <br>
+                                <strong>Mercado:</strong> M1C - J. QuintanaR &nbsp;  <strong>Distrito:</strong> M1 - MetroSur                 
+                                <strong>Gerente:</strong> Luis Héctor Barragan   &nbsp;  <strong>Dueño:</strong> Juan Manuel Diez Francisco
+                               
+                        </nav>
+                       
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first"
+                                role="tab" aria-controls="first" aria-selected="true">Mes a la Fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="second-tab" data-toggle="tab" href="#second"
+                                role="tab" aria-controls="second" aria-selected="false">Año a la fecha</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+            <div class="row">
+                <div class="col-12" style="display: inline-block;">
+                     <span style="font-size: 20px;">Venta de vehículos nuevos</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
+                </div>
+  
+       </div>
+
+            
+    <div class="tab-content">    
+        <div class="tab-pane fade show active" id="first" role="tabpanel"
+        aria-labelledby="first-tab">
+            <div class="row">
+                <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
+                
+
+                    <div class="top-right-button-container">
+                        <div class="btn-group">
+                            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Exportar
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" id="dataTablesCopy" href="#">Copiar</a>
+                                <a class="dropdown-item" id="dataTablesExcel" href="#">Excel</a>
+                                <a class="dropdown-item" id="dataTablesCsv" href="#">Csv</a>
+                                <a class="dropdown-item" id="dataTablesPdf" href="#">Pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+
+                        <div class="collapse dont-collapse-sm" id="displayOptions">
+                            <div class="d-block d-md-inline-block">
+                                <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
+                                    <input class="form-control" placeholder="Filtrar Campos" id="searchDatatable">
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
+                    <table id="tasa_conversion_clientes_mes" class="data-table responsive nowrap"
+                        data-order="[[ 1, &quot;desc&quot; ]]">
+                        <thead>
+                            <tr align="center">
+                                <th class="empty"></th>
+                                <th>Menudeo</th>
+                                <th>Flotilla</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">Autos</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">199</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">2,935</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">7,255</p>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">11,951</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">SUVs</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">.50%</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">.24%</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">.26%</p>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">.45%</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">Camión</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">1</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">7</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">19</p>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">54</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">Total</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">23</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">79</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">91</p>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">99</p>
+                                </td>
+                            </tr>
+
+                        
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-4 mb-4">
+
+                    <div class="col-lg-12 mb-5">
+                        <h6 class="mb-4">Objetivo 9 MTD</h6>
+                        <div class="chart-container chart">
+                            <canvas id="categoryChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+<div class="row">
+    <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
+    
+
+        <div class="top-right-button-container">
+            <div class="btn-group">
+                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Exportar
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" id="dataTablesCopy2" href="#">Copiar</a>
+                    <a class="dropdown-item" id="dataTablesExcel2" href="#">Excel</a>
+                    <a class="dropdown-item" id="dataTablesCsv2" href="#">Csv</a>
+                    <a class="dropdown-item" id="dataTablesPdf2" href="#">Pdf</a>
+                </div>
+            </div>
+        </div>
+        <div class="mb-2">
+
+            <div class="collapse dont-collapse-sm" id="displayOptions">
+                <div class="d-block d-md-inline-block">
+                    <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
+                        <input class="form-control" placeholder="Search Table" id="searchDatatable2">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        
+
+
+    </div>
+
+  
+
+</div>
+ <div class="row">
+                <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
+                    <table id="tasa_conversion_clientes_ano" class="data-table responsive data-table-feature" data-order="[[ 1, &quot;desc&quot; ]]">
+                        <thead>
+                            <tr align="center">
+                                <th class="empty"></th>
+                                <th>Menudeo</th>
+                                <th>Flotilla</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">Autos</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">199</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">2,935</p> <button type="button" class="btn btn-success mb-1"> </button>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">7,255</p><button type="button" class="btn btn-success mb-1"> </button>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">11,951</p><button type="button" class="btn btn-success mb-1"> </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">Suvs</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">.50%</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">.24%</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">.26%</p>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">.45%</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">Camión</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">1</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">7</p><button type="button" class="btn btn-success mb-1"> </button>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">19</p><button type="button" class="btn btn-success mb-1"> </button>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">54</p><button type="button" class="btn btn-success mb-1"> </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="list-item-heading">Total</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">23</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">79</p>
+                                </td>
+                                <td align="center">
+                                    <p class="text-muted">91</p>
+                                </td>
+                              
+                                <td align="center">
+                                    <p class="text-muted">99</p>
+                                </td>
+                            </tr>
+
+                         
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-4 mb-4">
+
+                    <div class="col-lg-12 mb-5" style="align-items: center;">
+                        <h6 class="mb-4">Objetivo 9 YTD</h6>
+                        <div class="chart-container chart">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
+            <div class="card dashboard-filled-line-chart">
+                <div class="card-body ">
+                    <div class="float-left float-none-xs">
+                        <div class="d-inline-block">
+                            <h5 class="d-inline">Total de Ventas</h5>
+                            <span class="text-muted text-small d-block">Vehículos Nuevos</span>
+                        </div>
+                    </div>
+                    <div class="btn-group float-right float-none-xs mt-2">
+                        <button class="btn btn-outline-primary btn-xs dropdown-toggle" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Últimos 3 Meses
+                        </button>
+                        <div class="dropdown-menu">
+                            
+                            <a class="dropdown-item" href="#">Últimos 6 meses</a>
+                            <a class="dropdown-item" href="#">Últimos 12 meses</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart card-body pt-0">
+                    <canvas id="visitChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
+            <div class="card dashboard-progress">
+                <div >
+                 
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Comparación de Objetivos</h5>
+                    <div class="mb-4">
+                        <p class="mb-2">Mercado
+                            <span class="float-right text-muted">80%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="mb-2">Distrito
+                            <span class="float-right text-muted">10%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="mb-2">Nacional
+                            <span class="float-right text-muted">15%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4" style="align-items: center;">
+                        <p class="mb-2">Absorción del Objetivo %
+                            
+                        </p>
+                     
+                    </div>
+
+
+       
+
+                 
+
+                </div>
+            </div>
+    </div>
+
+</div>
+         
+    </div>
+        </div>
+    </div>
+    <a id="vdpd"></a>
+    <div class="card mb-4" id="ventas_diarias_por_distribuidor">
+        <div class="card-body">
+         
+          
+        <div class="row">
+            <div class="col-12" style="display: inline-block;">
+                <span style="font-size: 20px;">Venta diarias por Distribuidor</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
+            </div>
+
+   </div>
+   <div class="row">
+    <div class="col-12">
+    
+
+        <div class="top-right-button-container">
+            <div class="btn-group">
+                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Exportar
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" id="dataTablesCopy" href="#">Copiar</a>
+                    <a class="dropdown-item" id="dataTablesExcel" href="#">Excel</a>
+                    <a class="dropdown-item" id="dataTablesCsv" href="#">Csv</a>
+                    <a class="dropdown-item" id="dataTablesPdf" href="#">Pdf</a>
+                </div>
+            </div>
+        </div>
+        <div class="mb-2">
+
+            <div class="collapse dont-collapse-sm" id="displayOptions">
+                <div class="d-block d-md-inline-block">
+                    <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
+                        <input class="form-control" placeholder="Search Table" id="searchDatatable">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="separator"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 mb-4 data-table-rows data-tables-hide-filter">
+        <table id="datatableRows" class="data-table responsive nowrap"
+            data-order="[[ 1, &quot;desc&quot; ]]">
+            <thead>
+                <tr align="center">
+                    <th class="empty"></th>
+                    <th>Menudeo</th>
+                    <th>Flotilla</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Mercado %<p class="text-muted" style="font-size:x-small">Absorción del Obj</p></th>
+                    <th>Estado</th>
+                    <th>Distrito %<p class="text-muted" style="font-size:x-small">Absorción del Obj</p></th>
+                    <th>Estado</th>
+                    <th>Nacional %<p class="text-muted" style="font-size:x-small">Absorción del Obj</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>
+                        <p class="list-item-heading">Autos</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">0</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success mb-1"> </button>
+                    </td>
+                    <td align="center">
+                        <p class="text-muted">93%</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                     <td>
+                        <button type="button" class="btn btn-danger mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="list-item-heading">SUVs</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">0</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success mb-1"> </button>
+                    </td>
+                    <td align="center">
+                        <p class="text-muted">93%</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                     <td>
+                        <button type="button" class="btn btn-danger mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="list-item-heading">Camiones</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">0</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success mb-1"> </button>
+                    </td>
+                    <td align="center">
+                        <p class="text-muted">93%</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                     <td>
+                        <button type="button" class="btn btn-danger mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="list-item-heading">Total</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">0</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">1</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success mb-1"> </button>
+                    </td>
+                    <td align="center">
+                        <p class="text-muted">93%</p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                     <td>
+                        <button type="button" class="btn btn-danger mb-1"> </button>
+                     </td>
+                     <td align="center">
+                        <p class="text-muted">91%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+
+                <div class="col-12">
+                    <h5 class="mb-4">Year Over Year</h5>
+                    <div class="row" style="text-align: center;margin-left: 40%;">  <h3 class="mb-4"> 0 Ventas Totales 05-13-2019</h5></div>
+                    <div class="row icon-cards-row mb-4">
+                        <div class="col-6">
+                            <a href="#" class="card">
+                                <div class="card-body text-center">
+                                    <i class="iconsminds-clock"></i>
+                                    <p class="card-text font-weight-semibold mb-0">MTD</p>
+                                    <p class="lead text-center">.00%</p>
+                                </div>  
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="card">
+                                <div class="card-body text-center">
+                                    <i class="iconsminds-flash-2"></i>
+                                    <p class="card-text font-weight-semibold mb-0">YTD</p>
+                                    <p class="lead text-center">.00%</p>
+                                </div>  
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+              
+</div>
+
+
+ 
+</div>
+
+        
+
+
+     
+</div>
+    </div>
+</div>
+<a id="cvp"></a>
+<div class="card mb-4" id="CVP">
+    <div class="card-body">
+     
+         
+    <div class="row">
+        <div class="col-12" style="display: inline-block;">
+             <span style="font-size: 20px;">Perspectiva del Cliente de Ventas y la Experiencia del Consumidor (CVP)</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card col-6">
+            <div class="card-body">
+               
+                <div id="accordion">
+
+                    <div class="border">
+                        <button class="btn btn-link collapsed"  data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="false" aria-controls="collapseOne">
+                           AUTOS
+                        </button>
+
+                        <div id="collapseOne" class="collapse" data-parent="#accordion">
+                            <div class="p-4">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid. 3 wolf moon officia aute,
+                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore
+                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice
+                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt
+                                you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border">
+                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           SUVs
+                        </button>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="p-4">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid. 3 wolf moon officia aute,
+                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore
+                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice
+                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt
+                                you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border">
+                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                           Camión
+                        </button>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="p-4">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid. 3 wolf moon officia aute,
+                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore
+                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice
+                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt
+                                you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border">
+                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                           Total
+                        </button>
+                        <div id="collapse4" class="collapse" data-parent="#accordion">
+                            <div class="p-4">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid. 3 wolf moon officia aute,
+                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                                eiusmod.
+                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                                labore
+                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice
+                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt
+                                you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="card mb-4" id="detalle_de_ventas">
+    <div class="card-body">
+     
+        
+    <div class="row">
+        <div class="col-12" style="display: inline-block;">
+             <span style="font-size: 20px;">Detalle de Ventas</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
+        </div>
+
+</div>
+</div>
+</div>
+
+
+<div class="card mb-4" id="inventario">
+    <div class="card-body">
+     
+        
+    <div class="row">
+        <div class="col-12" style="display: inline-block;">
+             <span style="font-size: 20px;">Inventario</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
+        </div>
+
+</div>
+</div>
+</div>
+
+<div class="card mb-4" id="ventas_de_vehiculos_nuevos">
+    <div class="card-body">
+     
+        
+    <div class="row">
+        <div class="col-12" style="display: inline-block;">
+             <span style="font-size: 20px;">Ventas de Vehículos Nuevos</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
+        </div>
+
+</div>
+</div>
+</div>
+    
+
+
+ 
+</div>
+</div>
+</div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <p class="mb-0 text-muted">Ford Motors 2020</p>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/Chart.bundle.min.js"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
+    <script src="js/vendor/moment.min.js"></script>
+    <script src="js/vendor/fullcalendar.min.js"></script>
+    <script src="js/vendor/datatables.min.js"></script>
+    <script src="js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="js/vendor/progressbar.min.js"></script>
+    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/select2.full.js"></script>
+    <script src="js/vendor/nouislider.min.js"></script>
+    <script src="js/vendor/bootstrap-datepicker.js"></script>
+    <script src="js/vendor/Sortable.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+    <script src="js/vendor/glide.min.js"></script>
+    <script src="js/vendor/Chart.bundle.min.js"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
+   
+    <script src="js/ventas.js"></script>
+  
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <script src="js/vendor/mousetrap.min.js"></script>
+</body>
+
+</html>
