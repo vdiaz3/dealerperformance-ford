@@ -1471,7 +1471,7 @@ $.dore = function (element, options) {
                   ticks: {
                     beginAtZero: true,
                     stepSize: 5,
-                    min: 0,
+                    min: 50,
                     max: 70,
                     padding: 0
                   }
@@ -1486,7 +1486,7 @@ $.dore = function (element, options) {
               ]
             },
             legend: {
-              display: true
+              display: false
             },
             tooltips: chartTooltip
           },
@@ -1494,41 +1494,11 @@ $.dore = function (element, options) {
             labels: ["01-abr", "02-abr", "03-abr", "04-abr", "05-abr", "06-abr", "07-abr","08-abr", "09-abr", "10-abr", "11-abr", "12-abr", "13-abr", "14-abr", "15-abr", "16-abr", "17-abr", "18-abr", "19-abr","20-abr","21-abr"],
             datasets: [
               {
-                label: "Autos",
+                label: "",
                 data: [54, 63, 60, 65, 60, 68, 60,54, 63, 60, 65, 60, 68, 60,54, 63, 60, 65, 60, 68, 60,54, 63, 60, 65, 60, 68, 60],
                 borderColor: themeColor1,
                 pointBackgroundColor: foregroundColor,
                 pointBorderColor: themeColor1,
-                pointHoverBackgroundColor: themeColor1,
-                pointHoverBorderColor: foregroundColor,
-                pointRadius: 4,
-                pointBorderWidth: 2,
-                pointHoverRadius: 5,
-                fill: true,
-                borderWidth: 2,
-                backgroundColor: themeColor1_10
-              },
-              {
-                label: "SUVs",
-                data: [14, 13, 10, 15, 10, 18, 10,14, 13, 10, 15, 10, 18, 10,14, 13, 10, 15, 10, 18, 10,14, 13, 10, 15, 10, 18, 10],
-                borderColor: themeColor2,
-                pointBackgroundColor: foregroundColor,
-                pointBorderColor: themeColor2,
-                pointHoverBackgroundColor: themeColor1,
-                pointHoverBorderColor: foregroundColor,
-                pointRadius: 4,
-                pointBorderWidth: 2,
-                pointHoverRadius: 5,
-                fill: true,
-                borderWidth: 2,
-                backgroundColor: themeColor1_10
-              },
-              {
-                label: "Camiones",
-                data: [5, 6, 6, 6, 6, 6, 6,5, 3, 0, 5, 0, 8, 0,5, 6, 6, 5, 0, 6, 0,4, 3, 6, 5, 0, 8, 6],
-                borderColor: themeColor2,
-                pointBackgroundColor: foregroundColor,
-                pointBorderColor: themeColor2,
                 pointHoverBackgroundColor: themeColor1,
                 pointHoverBorderColor: foregroundColor,
                 pointRadius: 4,
@@ -1567,7 +1537,7 @@ $.dore = function (element, options) {
                   ticks: {
                     beginAtZero: true,
                     stepSize: 5,
-                    min: 0,
+                    min: 50,
                     max: 70,
                     padding: 0
                   }
@@ -1582,7 +1552,7 @@ $.dore = function (element, options) {
               ]
             },
             legend: {
-              display: true
+              display: false
             },
             tooltips: chartTooltip
           },
@@ -1590,41 +1560,11 @@ $.dore = function (element, options) {
             labels: ["ENERO", "MARZO", "ABRIL",],
             datasets: [
               {
-                label: "Autos",
+                label: "",
                 data: [54, 63, 60],
                 borderColor: themeColor1,
                 pointBackgroundColor: foregroundColor,
                 pointBorderColor: themeColor1,
-                pointHoverBackgroundColor: themeColor1,
-                pointHoverBorderColor: foregroundColor,
-                pointRadius: 4,
-                pointBorderWidth: 2,
-                pointHoverRadius: 5,
-                fill: true,
-                borderWidth: 2,
-                backgroundColor: themeColor1_10
-              },
-              {
-                label: "SUVs",
-                data: [14, 23, 10],
-                borderColor: themeColor2,
-                pointBackgroundColor: foregroundColor,
-                pointBorderColor: themeColor2,
-                pointHoverBackgroundColor: themeColor1,
-                pointHoverBorderColor: foregroundColor,
-                pointRadius: 4,
-                pointBorderWidth: 2,
-                pointHoverRadius: 5,
-                fill: true,
-                borderWidth: 2,
-                backgroundColor: themeColor1_10
-              },
-              {
-                label: "Camiones",
-                data: [18, 2, 1],
-                borderColor: themeColor2,
-                pointBackgroundColor: foregroundColor,
-                pointBorderColor: themeColor2,
                 pointHoverBackgroundColor: themeColor1,
                 pointHoverBorderColor: foregroundColor,
                 pointRadius: 4,
@@ -1678,7 +1618,7 @@ $.dore = function (element, options) {
               ]
             },
             legend: {
-              display: true
+              display: false
             },
             tooltips: chartTooltip
           },
@@ -1686,41 +1626,11 @@ $.dore = function (element, options) {
             labels: ["OCT-19", "NOV-19", "DIC-19","ENE-20", "MAR-20", "ABR-20"],
             datasets: [
               {
-                label: "Autos",
-                data: [54, 63, 60,54, 63, 60],
+                label: "",
+                data: [54, 63, 60,52, 26, 10],
                 borderColor: themeColor1,
                 pointBackgroundColor: foregroundColor,
                 pointBorderColor: themeColor1,
-                pointHoverBackgroundColor: themeColor1,
-                pointHoverBorderColor: foregroundColor,
-                pointRadius: 4,
-                pointBorderWidth: 2,
-                pointHoverRadius: 5,
-                fill: true,
-                borderWidth: 2,
-                backgroundColor: themeColor1_10
-              },
-              {
-                label: "SUVs",
-                data: [14, 23, 10,34, 23, 20],
-                borderColor: themeColor2,
-                pointBackgroundColor: foregroundColor,
-                pointBorderColor: themeColor2,
-                pointHoverBackgroundColor: themeColor1,
-                pointHoverBorderColor: foregroundColor,
-                pointRadius: 4,
-                pointBorderWidth: 2,
-                pointHoverRadius: 5,
-                fill: true,
-                borderWidth: 2,
-                backgroundColor: themeColor1_10
-              },
-              {
-                label: "Camiones",
-                data: [18, 2, 1,12, 6, 2],
-                borderColor: themeColor2,
-                pointBackgroundColor: foregroundColor,
-                pointBorderColor: themeColor2,
                 pointHoverBackgroundColor: themeColor1,
                 pointHoverBorderColor: foregroundColor,
                 pointRadius: 4,
@@ -1797,21 +1707,6 @@ $.dore = function (element, options) {
               {
                 label: "SUVs",
                 data: [14, 23, 10,34, 23, 20,14, 43, 40,14, 23, 20],
-                borderColor: themeColor2,
-                pointBackgroundColor: foregroundColor,
-                pointBorderColor: themeColor2,
-                pointHoverBackgroundColor: themeColor1,
-                pointHoverBorderColor: foregroundColor,
-                pointRadius: 4,
-                pointBorderWidth: 2,
-                pointHoverRadius: 5,
-                fill: true,
-                borderWidth: 2,
-                backgroundColor: themeColor1_10
-              },
-              {
-                label: "Camiones",
-                data: [18, 2, 1,12, 6, 2,4, 3, 10,1, 2, 2],
                 borderColor: themeColor2,
                 pointBackgroundColor: foregroundColor,
                 pointBorderColor: themeColor2,
@@ -2010,6 +1905,420 @@ $.dore = function (element, options) {
             },
             legend: {
               display: true
+            },
+            tooltips: chartTooltip
+          },
+          data: {
+            labels: ["ENERO", "MARZO", "ABRIL",],
+            datasets: [
+              {
+                label: "CVP Ventas",
+                data: [5.2, 6.3, 6.4],
+                borderColor: themeColor1,
+                pointBackgroundColor: foregroundColor,
+                pointBorderColor: themeColor1,
+                pointHoverBackgroundColor: themeColor1,
+                pointHoverBorderColor: foregroundColor,
+                pointRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverRadius: 5,
+                fill: true,
+                borderWidth: 2,
+                backgroundColor: themeColor1_10
+              }
+            ]
+          }
+        });
+      }
+
+      if (document.getElementById("areaChart_tct3")) {
+        var areaChart_tct3 = document.getElementById("areaChart_tct3").getContext("2d");
+        var myChart10 = new Chart(areaChart_tct3, {
+          type: "LineWithShadow",
+          options: {
+            plugins: {
+              datalabels: {
+                display: false
+              }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: true,
+                    lineWidth: 1,
+                    color: "rgba(0,0,0,0.1)",
+                    drawBorder: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepSize: 5,
+                    min: 0,
+                    max: this.max,// Your absolute max value
+        callback: function (value) {
+          return (value / this.max * 10).toFixed(0) + '%'; // convert it to percentage
+        },
+                    padding: 0
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
+            legend: {
+              display: false
+            },
+            tooltips: chartTooltip
+          },
+          data: {
+            labels: ["ABR-19", "MAY-19", "JUN-19","JUL-19", "AGO-19", "SEP-19","OCT-19", "NOV-19", "DIC-19","ENE-20", "MAR-20", "ABR-20"],
+            datasets: [
+              {
+                label: "",
+                data: [5.4, 6.3, 6.0,5.4, 6.3, 6.0,5.4, 6.3, 6.0,5.4, 6.3, 6.0],
+                borderColor: themeColor1,
+                pointBackgroundColor: foregroundColor,
+                pointBorderColor: themeColor1,
+                pointHoverBackgroundColor: themeColor1,
+                pointHoverBorderColor: foregroundColor,
+                pointRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverRadius: 5,
+                fill: true,
+                borderWidth: 2,
+                backgroundColor: themeColor1_10
+              }
+            ]
+          }
+        });
+      }
+    
+      if (document.getElementById("areaChart_tct2")) {
+        var areaChart_tct2 = document.getElementById("areaChart_tct2").getContext("2d");
+        var myChart11 = new Chart(areaChart_tct2, {
+          type: "LineWithShadow",
+          options: {
+            plugins: {
+              datalabels: {
+                display: false
+              }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: true,
+                    lineWidth: 1,
+                    color: "rgba(0,0,0,0.1)",
+                    drawBorder: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepSize: 5,
+                    min: 0,
+                    max: this.max,// Your absolute max value
+        callback: function (value) {
+          return (value / this.max * 10).toFixed(0) + '%'; // convert it to percentage
+        },
+                    padding: 0
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
+            legend: {
+              display: false
+            },
+            tooltips: chartTooltip
+          },
+          data: {
+            labels: ["OCT-19", "NOV-19", "DIC-19","ENE-20", "MAR-20", "ABR-20"],
+            datasets: [
+              {
+                label: "",
+                data: [5.4, 6.3, 6.0,5.2, 2.6, 1.0],
+                borderColor: themeColor1,
+                pointBackgroundColor: foregroundColor,
+                pointBorderColor: themeColor1,
+                pointHoverBackgroundColor: themeColor1,
+                pointHoverBorderColor: foregroundColor,
+                pointRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverRadius: 5,
+                fill: true,
+                borderWidth: 2,
+                backgroundColor: themeColor1_10
+              }
+            ]
+          }
+        });
+      }
+    
+      if (document.getElementById("areaChart_tct1")) {
+        var areaChart_tct1 = document.getElementById("areaChart_tct1").getContext("2d");
+        var myChart12 = new Chart(areaChart_tct1, {
+          type: "LineWithShadow",
+          options: {
+            plugins: {
+              datalabels: {
+                display: false
+              }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: true,
+                    lineWidth: 1,
+                    color: "rgba(0,0,0,0.1)",
+                    drawBorder: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepSize: 5,
+                    min: 0,
+                    max: this.max,// Your absolute max value
+        callback: function (value) {
+          return (value / this.max * 10).toFixed(0) + '%'; // convert it to percentage
+        },
+                    padding: 0
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
+            legend: {
+              display: false
+            },
+            tooltips: chartTooltip
+          },
+          data: {
+            labels: ["ENERO", "MARZO", "ABRIL",],
+            datasets: [
+              {
+                label: "CVP Ventas",
+                data: [5.2, 6.3, 6.4],
+                borderColor: themeColor1,
+                pointBackgroundColor: foregroundColor,
+                pointBorderColor: themeColor1,
+                pointHoverBackgroundColor: themeColor1,
+                pointHoverBorderColor: foregroundColor,
+                pointRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverRadius: 5,
+                fill: true,
+                borderWidth: 2,
+                backgroundColor: themeColor1_10
+              }
+            ]
+          }
+        });
+      }
+
+      if (document.getElementById("areaChart_ub3")) {
+        var areaChart_ub3 = document.getElementById("areaChart_ub3").getContext("2d");
+        var myChart20 = new Chart(areaChart_tct3, {
+          type: "LineWithShadow",
+          options: {
+            plugins: {
+              datalabels: {
+                display: false
+              }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: true,
+                    lineWidth: 1,
+                    color: "rgba(0,0,0,0.1)",
+                    drawBorder: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepSize: 5,
+                    min: 0,
+                    max: this.max,// Your absolute max value
+        callback: function (value) {
+          return (value / this.max * 10).toFixed(0) + '%'; // convert it to percentage
+        },
+                    padding: 0
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
+            legend: {
+              display: false
+            },
+            tooltips: chartTooltip
+          },
+          data: {
+            labels: ["ABR-19", "MAY-19", "JUN-19","JUL-19", "AGO-19", "SEP-19","OCT-19", "NOV-19", "DIC-19","ENE-20", "MAR-20", "ABR-20"],
+            datasets: [
+              {
+                label: "",
+                data: [5.4, 6.3, 6.0,5.4, 6.3, 6.0,5.4, 6.3, 6.0,5.4, 6.3, 6.0],
+                borderColor: themeColor1,
+                pointBackgroundColor: foregroundColor,
+                pointBorderColor: themeColor1,
+                pointHoverBackgroundColor: themeColor1,
+                pointHoverBorderColor: foregroundColor,
+                pointRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverRadius: 5,
+                fill: true,
+                borderWidth: 2,
+                backgroundColor: themeColor1_10
+              }
+            ]
+          }
+        });
+      }
+    
+      if (document.getElementById("areaChart_ub2")) {
+        var areaChart_ub2 = document.getElementById("areaChart_ub2").getContext("2d");
+        var myChart21 = new Chart(areaChart_ub2, {
+          type: "LineWithShadow",
+          options: {
+            plugins: {
+              datalabels: {
+                display: false
+              }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: true,
+                    lineWidth: 1,
+                    color: "rgba(0,0,0,0.1)",
+                    drawBorder: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepSize: 5,
+                    min: 0,
+                    max: this.max,// Your absolute max value
+        callback: function (value) {
+          return (value / this.max * 10).toFixed(0) + '%'; // convert it to percentage
+        },
+                    padding: 0
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
+            legend: {
+              display: false
+            },
+            tooltips: chartTooltip
+          },
+          data: {
+            labels: ["OCT-19", "NOV-19", "DIC-19","ENE-20", "MAR-20", "ABR-20"],
+            datasets: [
+              {
+                label: "",
+                data: [5.4, 6.3, 6.0,5.2, 2.6, 1.0],
+                borderColor: themeColor1,
+                pointBackgroundColor: foregroundColor,
+                pointBorderColor: themeColor1,
+                pointHoverBackgroundColor: themeColor1,
+                pointHoverBorderColor: foregroundColor,
+                pointRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverRadius: 5,
+                fill: true,
+                borderWidth: 2,
+                backgroundColor: themeColor1_10
+              }
+            ]
+          }
+        });
+      }
+    
+      if (document.getElementById("areaChart_ub1")) {
+        var areaChart_ub1 = document.getElementById("areaChart_ub1").getContext("2d");
+        var myChart22 = new Chart(areaChart_ub1, {
+          type: "LineWithShadow",
+          options: {
+            plugins: {
+              datalabels: {
+                display: false
+              }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: true,
+                    lineWidth: 1,
+                    color: "rgba(0,0,0,0.1)",
+                    drawBorder: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepSize: 5,
+                    min: 0,
+                    max: this.max,// Your absolute max value
+        callback: function (value) {
+          return (value / this.max * 10).toFixed(0) + '%'; // convert it to percentage
+        },
+                    padding: 0
+                  }
+                }
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false
+                  }
+                }
+              ]
+            },
+            legend: {
+              display: false
             },
             tooltips: chartTooltip
           },
@@ -2966,6 +3275,7 @@ $.dore = function (element, options) {
         searching: false,
         destroy: true,
         info: false,
+        "aaSorting": [],
         sDom: '<"row view-filter"<"col-sm-12"<"float-left"l><"float-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
         pageLength: 6,
         language: {
@@ -3086,40 +3396,7 @@ $.dore = function (element, options) {
           },
           search: "_INPUT_",
           searchPlaceholder: "Buscar...",
-          lengthMenu: "Registros _MENU_",
-          info:           "Mostrando _START_ de _END_ de _TOTAL_ registros",
-        },
-      });
-
-      $(".data-table-feature4").DataTable({
-        sDom: '<"row view-filter"<"col-sm-12"<"float-right"l><"float-left"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
-        "columns": [
-          { "data": "name" },
-          { "data": "position" },
-          { "data": "office" },
-          { "data": "age" },
-          { "data": "name2" },
-          { "data": "name3" }
-        ],
-        drawCallback: function () {
-          $($(".dataTables_wrapper .pagination li:first-of-type"))
-            .find("a")
-            .addClass("prev");
-          $($(".dataTables_wrapper .pagination li:last-of-type"))
-            .find("a")
-            .addClass("next");
-
-          $(".dataTables_wrapper .pagination").addClass("pagination-sm");
-        },
-        language: {
-          paginate: {
-            previous: "<i class='simple-icon-arrow-left'></i>",
-            next: "<i class='simple-icon-arrow-right'></i>"
-          },
-          search: "_INPUT_",
-          searchPlaceholder: "Buscar...",
-          lengthMenu: "Registros _MENU_",
-          info:           "Mostrando _START_ de _END_ de _TOTAL_ registros",
+          lengthMenu: "Items Per Page _MENU_"
         },
       });
 
@@ -3153,7 +3430,7 @@ $.dore = function (element, options) {
           },
           search: "_INPUT_",
           searchPlaceholder: "Buscar...",
-          lengthMenu: "Registros _MENU_"
+          lengthMenu: "Items Per Page _MENU_"
         },
       });
 

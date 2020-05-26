@@ -27,10 +27,11 @@
     <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
     <link rel="stylesheet" href="css/vendor/cropper.min.css" />
     <link rel="stylesheet" href="css/main.css" />
+    
 </head>
 
 <body id="app-container" class="menu-hidden show-spinner">
-    <nav class="navbar">
+    <nav class="navbar fixed-top">
         <div class="d-flex align-items-center navbar-left">
             <a href="#" class="menu-button d-none d-md-block">
                 <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
@@ -80,32 +81,13 @@
         <div class="main-menu">
             <div class="scroll">
                 <ul class="list-unstyled">
-                    <li class="active">
-                        <a href="#dashboard">
-                            <i class="iconsminds-shop-4"></i>
-                            <span>Desempeño General</span>
-                        </a>
-                    </li>
+                    
                     <li>
                         <a href="#layouts">
-                            <i class="iconsminds-digital-drawing"></i> Ventas
+                            <i class="active iconsminds-digital-drawing"></i> Ventas
                         </a>
                     </li>
-                    <li>
-                        <a href="#applications">
-                            <i class="iconsminds-air-balloon-1"></i> Prospección
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#ui">
-                            <i class="iconsminds-pantone"></i> Servicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#menu">
-                            <i class="iconsminds-three-arrow-fork"></i> Rentabilidad
-                        </a>
-                    </li>
+                    
                  
                   
                 </ul>
@@ -173,8 +155,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="ventas.html#vdpd">
-                            <span class="d-inline-block">Ventas Diarias por Distribuidor</span>
+                        <a href="ventas.html#cv">
+                            <span class="d-inline-block">Comportamiento de Ventas</span>
                         </a>
                     </li>
                     <li>
@@ -182,9 +164,15 @@
                             <span class="d-inline-block">Perspectiva del Clientes de Ventas y la Experiencia del Consumidor</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="#">
                             <span class="d-inline-block"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ventas.html#cvpg">
+                            <span class="d-inline-block">Comportamiento del CVP</span>
                         </a>
                     </li>
                     <li>
@@ -197,11 +185,7 @@
                             <span class="d-inline-block">Inventario</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="ventas.html#vdn2">
-                            <span class="d-inline-block">Venta de Vehículos Nuevos</span>
-                        </a>
-                    </li>
+                   
                 </ul>
                 <ul class="list-unstyled" data-link="applications">
                     <li>
@@ -295,7 +279,14 @@
     <main>
      
         <div class="container-fluid">
-            <div class="card mb-4">
+
+            <div class="card mb-4" >
+                <div class="card-header p-0 position-relative">
+                    <div class="position-absolute handle card-icon">
+                        <a href="#"><img src="img/exportar.png" height="15px"   data-toggle="tooltip"
+                            data-placement="left" title="Presionando aquí puede exportar todos los datos de este panel en formato excel para su procesamiento y análisis" ></a>
+                    </div>
+                </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-3">
@@ -341,800 +332,1210 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-4">
-            <div class="card-body">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs " role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first"
-                                role="tab" aria-controls="first" aria-selected="true">Mes a la Fecha</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="second-tab" data-toggle="tab" href="#second"
-                                role="tab" aria-controls="second" aria-selected="false">Año a la fecha</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-content">
-            <div class="row">
-                <div class="col-12" style="display: inline-block;">
-                     <span style="font-size: 20px;">Venta de vehículos nuevos</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
-                </div>
-  
-       </div>
-
+   
             
-    <div class="tab-content">    
-        <div class="tab-pane fade show active" id="first" role="tabpanel"
-        aria-labelledby="first-tab">
-            <div class="row">
-                <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
-                
-
-                    <div class="top-right-button-container">
-                        <div class="btn-group">
-                            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Exportar
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" id="dataTablesCopy" href="#">Copiar</a>
-                                <a class="dropdown-item" id="dataTablesExcel" href="#">Excel</a>
-                                <a class="dropdown-item" id="dataTablesCsv" href="#">Csv</a>
-                                <a class="dropdown-item" id="dataTablesPdf" href="#">Pdf</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-2">
-
-                        <div class="collapse dont-collapse-sm" id="displayOptions">
-                            <div class="d-block d-md-inline-block">
-                                <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
-                                    <input class="form-control" placeholder="Filtrar Campos" id="searchDatatable">
+            <div class="container-fluid">
+           
+              
+                <div class="row rentabilidad">
+                    <div class="col-md-12">
+                        <div class="card"> 
+                            <div class="card-header p-0 position-relative">
+                                <div class="position-absolute handle card-icon">
+                                    <img src="data:image/png;base64,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" height="15px"  data-toggle="tooltip" data-placement="top" title="Absorción del Objetivo: consta de tres indicadores clave que permiten medir el deseméño mes a la fecha, año a la fecha y el inventario de los últimos 180 días">
                                 </div>
                             </div>
-                           
+                            <div class="card-body"> 
+                                <span style="font-size: 20px; font-weight: bolder;">Rentabilidad</span> &nbsp;&nbsp; 
+                                    <div class="card">
+                                       
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="first-tab2" data-toggle="tab" href="#first2"
+                                                        role="tab" aria-controls="first" aria-selected="true">Mes a la Fecha</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="second-tab2" data-toggle="tab" href="#second2"
+                                                        role="tab" aria-controls="second2" aria-selected="false">Año a la Fecha</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="first2" role="tabpanel" aria-labelledby="first-tab2">
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div  >
+                                                                <div  >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>MNP</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Nacional</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">ROS</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">6.55%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Absorción Postventa</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">65%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Capital de Trabajo</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td  style="font-weight: bold;">Punto de Equilibrio</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4655</span></td>
+                                                                            </tr>
+                                                                           
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                 
+                                                </div>
+                                                <div class="tab-pane fade" id="second2" role="tabpanel" aria-labelledby="second-tab2">
+                                                  
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div >
+                                                                <div >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>MNP</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Nacional</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">ROS</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">6.55%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Absorción Postventa</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">65%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Capital de Trabajo</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td  style="font-weight: bold;">Punto de Equilibrio</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4655</span></td>
+                                                                            </tr>
+                                                                           
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                                </div>
+                                            </div>
+                                            <p><span class="muted mb-1 text-small">*En comparación con el Modelo de Negocio Positivo (MNP). El desempeño en Amarillo es mayor 90% y menor al 100% de Absorción, esta regla excluye al ROS.</span></p>
+                                            <p><span class="muted mb-1 text-small">**En comparación con el Objetivo de ROS. El desempeño en Amarillo es mayor al 0% y menor al 1.3%.</span></p>
+                                            <p><span class="muted mb-1 text-small">**En comparación con el Objetivo de ROS firmado en guías de venta. El desempeño en Amarillo es mayor 90% y menor al 100% de Absorción.  </span></p>
+                                        </div>
+                                    </div>
+                                   
+                            </div>
                         </div>
-                    </div>
-                    <div class="separator"></div>
+                    </div>    
+                    
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
-                    <table id="tasa_conversion_clientes_mes" class="data-table responsive nowrap"
-                        data-order="[[ 1, &quot;desc&quot; ]]">
-                        <thead>
-                            <tr align="center">
-                                <th class="empty"></th>
-                                <th>Menudeo</th>
-                                <th>Flotilla</th>
-                                <th>Total</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">Autos</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">199</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">2,935</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">7,255</p>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">11,951</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">SUVs</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">.50%</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">.24%</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">.26%</p>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">.45%</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">Camión</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">1</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">7</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">19</p>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">54</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">Total</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">23</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">79</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">91</p>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">99</p>
-                                </td>
-                            </tr>
-
-                        
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-4 mb-4">
-
-                    <div class="col-lg-12 mb-5">
-                        <h6 class="mb-4">Objetivo 9 MTD</h6>
-                        <div class="chart-container chart">
-                            <canvas id="categoryChartNoShadow"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
-<div class="row">
-    <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
-    
-
-        <div class="top-right-button-container">
-            <div class="btn-group">
-                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Exportar
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" id="dataTablesCopy2" href="#">Copiar</a>
-                    <a class="dropdown-item" id="dataTablesExcel2" href="#">Excel</a>
-                    <a class="dropdown-item" id="dataTablesCsv2" href="#">Csv</a>
-                    <a class="dropdown-item" id="dataTablesPdf2" href="#">Pdf</a>
-                </div>
-            </div>
-        </div>
-        <div class="mb-2">
-
-            <div class="collapse dont-collapse-sm" id="displayOptions">
-                <div class="d-block d-md-inline-block">
-                    <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
-                        <input class="form-control" placeholder="Search Table" id="searchDatatable2">
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-        
-
-
-    </div>
-
-  
-
-</div>
- <div class="row">
-                <div class="col-8 mb-4 data-table-rows data-tables-hide-filter">
-                    <table id="tasa_conversion_clientes_ano" class="data-table responsive data-table-feature" data-order="[[ 1, &quot;desc&quot; ]]">
-                        <thead>
-                            <tr align="center">
-                                <th class="empty"></th>
-                                <th>Menudeo</th>
-                                <th>Flotilla</th>
-                                <th>Total</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">Autos</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">199</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">2,935</p> <button type="button" class="btn btn-success mb-1"> </button>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">7,255</p><button type="button" class="btn btn-success mb-1"> </button>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">11,951</p><button type="button" class="btn btn-success mb-1"> </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">Suvs</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">.50%</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">.24%</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">.26%</p>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">.45%</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">Camión</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">1</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">7</p><button type="button" class="btn btn-success mb-1"> </button>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">19</p><button type="button" class="btn btn-success mb-1"> </button>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">54</p><button type="button" class="btn btn-success mb-1"> </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="list-item-heading">Total</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">23</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">79</p>
-                                </td>
-                                <td align="center">
-                                    <p class="text-muted">91</p>
-                                </td>
-                              
-                                <td align="center">
-                                    <p class="text-muted">99</p>
-                                </td>
-                            </tr>
-
-                         
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-4 mb-4">
-
-                    <div class="col-lg-12 mb-5" style="align-items: center;">
-                        <h6 class="mb-4">Objetivo 9 YTD</h6>
-                        <div class="chart-container chart">
-                            <canvas id="categoryChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div> 
-
-    <div class="row">
-        <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
-            <div class="card dashboard-filled-line-chart">
-                <div class="card-body ">
-                    <div class="float-left float-none-xs">
-                        <div class="d-inline-block">
-                            <h5 class="d-inline">Total de Ventas</h5>
-                            <span class="text-muted text-small d-block">Vehículos Nuevos</span>
-                        </div>
-                    </div>
-                    <div class="btn-group float-right float-none-xs mt-2">
-                        <button class="btn btn-outline-primary btn-xs dropdown-toggle" type="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Últimos 3 Meses
-                        </button>
-                        <div class="dropdown-menu">
-                            
-                            <a class="dropdown-item" href="#">Últimos 6 meses</a>
-                            <a class="dropdown-item" href="#">Últimos 12 meses</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="chart card-body pt-0">
-                    <canvas id="visitChart"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
-            <div class="card dashboard-progress">
-                <div >
-                 
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Comparación de Objetivos</h5>
-                    <div class="mb-4">
-                        <p class="mb-2">Mercado
-                            <span class="float-right text-muted">80%</span>
-                        </p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <p class="mb-2">Distrito
-                            <span class="float-right text-muted">10%</span>
-                        </p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <p class="mb-2">Nacional
-                            <span class="float-right text-muted">15%</span>
-                        </p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="mb-4" style="align-items: center;">
-                        <p class="mb-2">Absorción del Objetivo %
-                            
-                        </p>
-                     
-                    </div>
-
-
-       
-
-                 
-
-                </div>
-            </div>
-    </div>
-
-</div>
-         
-    </div>
-        </div>
-    </div>
-    <a id="vdpd"></a>
-    <div class="card mb-4" id="ventas_diarias_por_distribuidor">
-        <div class="card-body">
-         
-          
-        <div class="row">
-            <div class="col-12" style="display: inline-block;">
-                <span style="font-size: 20px;">Venta diarias por Distribuidor</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
-            </div>
-
-   </div>
-   <div class="row">
-    <div class="col-12">
-    
-
-        <div class="top-right-button-container">
-            <div class="btn-group">
-                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Exportar
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" id="dataTablesCopy" href="#">Copiar</a>
-                    <a class="dropdown-item" id="dataTablesExcel" href="#">Excel</a>
-                    <a class="dropdown-item" id="dataTablesCsv" href="#">Csv</a>
-                    <a class="dropdown-item" id="dataTablesPdf" href="#">Pdf</a>
-                </div>
-            </div>
-        </div>
-        <div class="mb-2">
-
-            <div class="collapse dont-collapse-sm" id="displayOptions">
-                <div class="d-block d-md-inline-block">
-                    <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
-                        <input class="form-control" placeholder="Search Table" id="searchDatatable">
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-        <div class="separator"></div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12 mb-4 data-table-rows data-tables-hide-filter">
-        <table id="datatableRows" class="data-table responsive nowrap"
-            data-order="[[ 1, &quot;desc&quot; ]]">
-            <thead>
-                <tr align="center">
-                    <th class="empty"></th>
-                    <th>Menudeo</th>
-                    <th>Flotilla</th>
-                    <th>Total</th>
-                    <th>Estado</th>
-                    <th>Mercado %<p class="text-muted" style="font-size:x-small">Absorción del Obj</p></th>
-                    <th>Estado</th>
-                    <th>Distrito %<p class="text-muted" style="font-size:x-small">Absorción del Obj</p></th>
-                    <th>Estado</th>
-                    <th>Nacional %<p class="text-muted" style="font-size:x-small">Absorción del Obj</p></th>
-                </tr>
-            </thead>
-            <tbody>
                 
-                <tr>
-                    <td>
-                        <p class="list-item-heading">Autos</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">0</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-success mb-1"> </button>
-                    </td>
-                    <td align="center">
-                        <p class="text-muted">93%</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-warning mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                     <td>
-                        <button type="button" class="btn btn-danger mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="list-item-heading">SUVs</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">0</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-success mb-1"> </button>
-                    </td>
-                    <td align="center">
-                        <p class="text-muted">93%</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-warning mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                     <td>
-                        <button type="button" class="btn btn-danger mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="list-item-heading">Camiones</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">0</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-success mb-1"> </button>
-                    </td>
-                    <td align="center">
-                        <p class="text-muted">93%</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-warning mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                     <td>
-                        <button type="button" class="btn btn-danger mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="list-item-heading">Total</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">0</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">1</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-success mb-1"> </button>
-                    </td>
-                    <td align="center">
-                        <p class="text-muted">93%</p>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-warning mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                     <td>
-                        <button type="button" class="btn btn-danger mb-1"> </button>
-                     </td>
-                     <td align="center">
-                        <p class="text-muted">91%</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-
-<div class="row">
-
-                <div class="col-12">
-                    <h5 class="mb-4">Year Over Year</h5>
-                    <div class="row" style="text-align: center;margin-left: 40%;">  <h3 class="mb-4"> 0 Ventas Totales 05-13-2019</h5></div>
-                    <div class="row icon-cards-row mb-4">
-                        <div class="col-6">
-                            <a href="#" class="card">
-                                <div class="card-body text-center">
-                                    <i class="iconsminds-clock"></i>
-                                    <p class="card-text font-weight-semibold mb-0">MTD</p>
-                                    <p class="lead text-center">.00%</p>
-                                </div>  
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="card">
-                                <div class="card-body text-center">
-                                    <i class="iconsminds-flash-2"></i>
-                                    <p class="card-text font-weight-semibold mb-0">YTD</p>
-                                    <p class="lead text-center">.00%</p>
-                                </div>  
-                            </a>
-                        </div>
-                    </div>  
-                </div>
-              
-</div>
-
-
- 
-</div>
-
-        
-
-
-     
-</div>
-    </div>
-</div>
-<a id="cvp"></a>
-<div class="card mb-4" id="CVP">
-    <div class="card-body">
-     
-         
-    <div class="row">
-        <div class="col-12" style="display: inline-block;">
-             <span style="font-size: 20px;">Perspectiva del Cliente de Ventas y la Experiencia del Consumidor (CVP)</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="card col-6">
-            <div class="card-body">
-               
-                <div id="accordion">
-
-                    <div class="border">
-                        <button class="btn btn-link collapsed"  data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="false" aria-controls="collapseOne">
-                           AUTOS
-                        </button>
-
-                        <div id="collapseOne" class="collapse" data-parent="#accordion">
-                            <div class="p-4">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod.
-                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                                coffee
-                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-                                labore
-                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                vice
-                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt
-                                you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border">
-                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                           SUVs
-                        </button>
-                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                            <div class="p-4">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod.
-                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                                coffee
-                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-                                labore
-                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                vice
-                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt
-                                you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border">
-                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                            data-target="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
-                           Camión
-                        </button>
-                        <div id="collapseThree" class="collapse" data-parent="#accordion">
-                            <div class="p-4">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod.
-                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                                coffee
-                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-                                labore
-                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                vice
-                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt
-                                you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border">
-                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                            data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                           Total
-                        </button>
-                        <div id="collapse4" class="collapse" data-parent="#accordion">
-                            <div class="p-4">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod.
-                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                                coffee
-                                nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-                                labore
-                                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                vice
-                                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt
-                                you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-
-
-
-<div class="card mb-4" id="detalle_de_ventas">
-    <div class="card-body">
-     
-        
-    <div class="row">
-        <div class="col-12" style="display: inline-block;">
-             <span style="font-size: 20px;">Detalle de Ventas</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
-        </div>
-
-</div>
-</div>
-</div>
-
-
-<div class="card mb-4" id="inventario">
-    <div class="card-body">
-     
-        
-    <div class="row">
-        <div class="col-12" style="display: inline-block;">
-             <span style="font-size: 20px;">Inventario</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
-        </div>
-
-</div>
-</div>
-</div>
-
-<div class="card mb-4" id="ventas_de_vehiculos_nuevos">
-    <div class="card-body">
-     
-        
-    <div class="row">
-        <div class="col-12" style="display: inline-block;">
-             <span style="font-size: 20px;">Ventas de Vehículos Nuevos</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
-        </div>
-
-</div>
-</div>
-</div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row tendencia_ros ">
+                    <div class="col-md-12">
+                        <div class="card"> 
+                            <div class="card-body"> 
+                                <span style="font-size: 20px; font-weight: bolder;">Tendencia del ROS</span>  
+                                
+                                    <div class="row ">
+                                        <div class="col-xs-12">
+                                            <div>
+                                                <div class="card-header p-0 position-relative">
+                                                    <div class="position-absolute handle card-icon">
+                                                        <img src="data:image/png;base64,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" height="15px"  data-toggle="tooltip" data-placement="top" title="Absorción del Objetivo: consta de tres indicadores clave que permiten medir el deseméño mes a la fecha, año a la fecha y el inventario de los últimos 180 días">
+                                                    </div>
+                                                </div>
+                                                <div class="card-header">
+                                                    <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="first-tab_cvp" data-toggle="tab" href="#first_cvp"
+                                                                role="tab" aria-controls="first" aria-selected="true">Últimos 3 Meses</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="second-tab_cvp" data-toggle="tab" href="#second_cvp"
+                                                                role="tab" aria-controls="second" aria-selected="false">Últimos 6 Meses</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="third-tab_cvp" data-toggle="tab" href="#third_cvp"
+                                                                role="tab" aria-controls="third" aria-selected="false">Últimos 12 Meses</a>
+                                                        </li>
     
+                                                    </ul>
+                                                </div>
+                                                <div> 
+                                                   
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade show active" id="first_cvp" role="tabpanel" aria-labelledby="first-tab_cvp">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_cvp1"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="second_cvp" role="tabpanel" aria-labelledby="second-tab_cvp">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_cvp2"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="third_cvp" role="tabpanel" aria-labelledby="third-tab_cvp">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_cvp3"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>   
+                                                  
+                                                </div>
+                                            </div>
+                                        </div>        
+                        
+                                    </div>
+                                 
+                            </div>
+                        </div>
+                    </div>    
+                    
+                </div>
 
 
- 
-</div>
-</div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row tendencia_capital_trabajo ">
+                    <div class="col-md-12">
+                        <div class="card"> 
+                            <div class="card-body"> 
+                                <span style="font-size: 20px; font-weight: bolder;">Tendencia de Capital de Trabajo</span>  
+                                
+                                    <div class="row ">
+                                        <div class="col-xs-12">
+                                            <div>
+                                                <div class="card-header p-0 position-relative">
+                                                    <div class="position-absolute handle card-icon">
+                                                        <img src="data:image/png;base64,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" height="15px"  data-toggle="tooltip" data-placement="top" title="Absorción del Objetivo: consta de tres indicadores clave que permiten medir el deseméño mes a la fecha, año a la fecha y el inventario de los últimos 180 días">
+                                                    </div>
+                                                </div>
+                                                <div class="card-header">
+                                                    <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="first-tab_tct" data-toggle="tab" href="#first_tct"
+                                                                role="tab" aria-controls="first" aria-selected="true">Últimos 3 Meses</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="second-tab_tct" data-toggle="tab" href="#second_tct"
+                                                                role="tab" aria-controls="second" aria-selected="false">Últimos 6 Meses</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="third-tab_tct" data-toggle="tab" href="#third_tct"
+                                                                role="tab" aria-controls="third" aria-selected="false">Últimos 12 Meses</a>
+                                                        </li>
+    
+                                                    </ul>
+                                                </div>
+                                                <div> 
+                                                   
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade show active" id="first_tct" role="tabpanel" aria-labelledby="first-tab_tct">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_tct1"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="second_tct" role="tabpanel" aria-labelledby="second-tab_tct">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_tct2"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="third_tct" role="tabpanel" aria-labelledby="third-tab_tct">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_tct3"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>   
+                                                  
+                                                </div>
+                                            </div>
+                                        </div>        
+                        
+                                    </div>
+                                 
+                            </div>
+                        </div>
+                    </div>    
+                    
+                </div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row ventas">
+                    <div class="col-md-12">
+                        <div class="card"> 
+                            <div class="card-header p-0 position-relative">
+                                <div class="position-absolute handle card-icon">
+                                    <img src="data:image/png;base64,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" height="15px"  data-toggle="tooltip" data-placement="top" title="Absorción del Objetivo: consta de tres indicadores clave que permiten medir el deseméño mes a la fecha, año a la fecha y el inventario de los últimos 180 días">
+                                </div>
+                            </div>
+                            <div class="card-body"> 
+                                <span style="font-size: 20px; font-weight: bolder;">Ventas</span> &nbsp;&nbsp; 
+                                    <div class="card">
+                                       
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="first-tab2_v" data-toggle="tab" href="#first2_v"
+                                                        role="tab" aria-controls="first" aria-selected="true">Mes a la Fecha</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="second-tab2_v" data-toggle="tab" href="#second2_v"
+                                                        role="tab" aria-controls="second" aria-selected="false">Año a la Fecha</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="first2_v" role="tabpanel" aria-labelledby="first-tab2_v">
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div  >
+                                                                <div  >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>MNP</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Nacional</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Ventas</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">6.55%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Total de Ventas de Vehiculos Nuevos</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">65%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Total de Ventas de Vehiculos Usados</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td  style="font-weight: bold;">Total de Ventas de Postventa</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4655</span></td>
+                                                                            </tr>
+                                                                           
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                 
+                                                </div>
+                                                <div class="tab-pane fade" id="second2_v" role="tabpanel" aria-labelledby="second-tab2_v">
+                                                  
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div >
+                                                                <div >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>MNP</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Nacional</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Ventas</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">6.55%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Total de Ventas de Vehiculos Nuevos</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71%</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69%</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88%</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">65%</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Total de Ventas de Vehiculos Usados</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">$302.41MM</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">$302.41MM</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td  style="font-weight: bold;">Total de Ventas de Postventa</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4655</span></td>
+                                                                            </tr>
+                                                                           
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                                </div>
+                                            </div>
+                                            <p><span class="muted mb-1 text-small">*En comparación con el Modelo de Negocio Positivo (MNP). El desempeño en Amarillo es mayor 90% y menor al 100% de Absorción.  </span></p>
+                                          
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>    
+                    
+                </div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row utilidad_bruta">
+                    <div class="col-md-12">
+                        <div class="card"> 
+                            <div class="card-header p-0 position-relative">
+                                <div class="position-absolute handle card-icon">
+                                    <img src="data:image/png;base64,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" height="15px"  data-toggle="tooltip" data-placement="top" title="Absorción del Objetivo: consta de tres indicadores clave que permiten medir el deseméño mes a la fecha, año a la fecha y el inventario de los últimos 180 días">
+                                </div>
+                            </div>
+                            <div class="card-body"> 
+                                <span style="font-size: 20px; font-weight: bolder;">Utilidad Bruta</span> &nbsp;&nbsp; 
+                                    <div class="card">
+                                       
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="first-tab2_v" data-toggle="tab" href="#first2_v"
+                                                        role="tab" aria-controls="first" aria-selected="true">Mes a la Fecha</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="second-tab2_v" data-toggle="tab" href="#second2_v"
+                                                        role="tab" aria-controls="second" aria-selected="false">Año a la Fecha</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="first2_v" role="tabpanel" aria-labelledby="first-tab2_v">
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div  >
+                                                                <div  >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>MNP</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Nacional</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                <td style='font-weight: bold;'>Utilidad Bruta ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.61 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$4.01 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$52.9 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$194.54 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$415.05 MM</span></td>
+
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                <td>&nbsp;&nbsp;&nbsp;Utilidad Bruta Vehículos Nuevos ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.59 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.17 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$27.53 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$106.76 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$235.7 MM</span></td>
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>&nbsp;&nbsp;&nbsp;Margen de Utilidad (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>14.35 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'></span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>14.15%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>12.91 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0.1343</span></td>
+
+
+
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>&nbsp;&nbsp;&nbsp;Utilidad por Unidad Vendida ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+
+                                                                                </tr>
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Vehículos Usados ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0.45 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.62 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$14.52 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$24.02 MM</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Margen de Utilidad (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>11.28%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>11.52 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Utilidad por Unidad Vendida ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Postventa ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.02 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.4 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$25.26 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$86.24 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$171.19 MM</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Margen utilidad TOTAL (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>31.55 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>31.25%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>30.94 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Utilidad Bruta Refacciones TOTAL ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>55886000 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>1362774354%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>4406943654 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Utilidad Bruta Refacciones Mayoreo ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$6.11 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$15.94 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$35.11 MM</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Margen utilidad Refacciones Mayoreo (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>44.83%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>36.17 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Utilidad Bruta Refacciones Menudeo ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td></tr>
+
+                                                                                <tr><td>&nbsp;&nbsp;&nbsp;Margen utilidad Refacciones Menudeo (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>44.97 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>15.58%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>12.64 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Refacciones TOTAL (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>54.74 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>59.9%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>60.15 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Servicio ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0.46 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$7.25 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$26.25 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$55.54 MM</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Servicio (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>45.26 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>31.85%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>35.83 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta de Hojalateria / Pintura ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.87 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.94 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$5.86 MM</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta por Orden de Reparación ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Bruta de Hojalateria / Pintura (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>8.23%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>4.01 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+
+
+                                                                                                                    
+
+                                                                                                
+                                                                                                                
+
+                                                                                                    
+                                                                                                            
+
+                                                                                                
+                                                                                                        
+                                                                                                    
+                                                                                                
+                                                                                            
+                                                                                        
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                 
+                                                </div>
+                                                <div class="tab-pane fade" id="second2_v" role="tabpanel" aria-labelledby="second-tab2_v">
+                                                  
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div >
+                                                                <div >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>MNP</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Nacional</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                                <tr>
+                                                                                <td style='font-weight: bold;'>Utilidad Bruta ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.61 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$4.01 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$52.9 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$194.54 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$415.05 MM</span></td>
+
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                <td align="center">Utilidad Bruta Vehículos Nuevos ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.59 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.17 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$27.53 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$106.76 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$235.7 MM</span></td>
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                <td style='font-weight: bold;'>Margen de Utilidad (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>14.35 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'></span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>14.15%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>12.91 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0.1343</span></td>
+
+
+
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                <td style='font-weight: bold;'>Utilidad por Unidad Vendida ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$51.24 K</span></td>
+
+                                                                                </tr>
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Vehículos Usados ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0.45 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.62 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$14.52 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$24.02 MM</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen de Utilidad (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>11.28%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>11.52 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad por Unidad Vendida ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 K</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Postventa ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.02 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.4 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$25.26 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$86.24 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$171.19 MM</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad TOTAL (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>31.55 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>31.25%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>30.94 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Refacciones TOTAL ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>55886000 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>1362774354%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>4406943654 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Refacciones Mayoreo ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$6.11 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$15.94 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$35.11 MM</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Refacciones Mayoreo (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>44.83%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>36.17 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Refacciones Menudeo ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$251.3 K</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Refacciones Menudeo (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>44.97 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>15.58%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>12.64 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Refacciones TOTAL (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>54.74 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>59.9%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>60.15 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta Servicio ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0.46 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$7.25 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$26.25 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$55.54 MM</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Servicio (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>45.26 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>31.85%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>35.83 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta de Hojalateria / Pintura ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$0 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$1.87 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.94 MM</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$5.86 MM</span></td></tr>
+
+
+                                                                                <tr><td style='font-weight: bold;'>Utilidad Bruta por Orden de Reparación ($)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>$2.39 K</span></td></tr>
+
+                                                                                <tr><td style='font-weight: bold;'>Margen utilidad Bruta de Hojalateria / Pintura (%)</td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>8.23%</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>4.01 %</span></td>
+                                                                                <td><span class='badge badge-pill badge-danger mb-1'>0 %</span></td></tr>
+
+
+
+                                                                                                                    
+
+                                                                                                
+                                                                                                                
+
+                                                                                                    
+                                                                                                            
+
+                                                                                                
+                                                                                                        
+                                                                                                    
+                                                                                                
+                                                                                            
+                                                                                        
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                                </div>
+                                            </div>
+                                            <p><span class="muted mb-1 text-small">*En comparación con el Modelo de Negocio Positivo (MNP). El desempeño en Amarillo es mayor 90% y menor al 100% de Absorción.  </span></p>
+                                          
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>    
+                    
+                </div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row utilida_antes_impuestos">
+                    <div class="col-md-12">
+                        <div class="card"> 
+                            <div class="card-body"> 
+                                <span style="font-size: 20px; font-weight: bolder;">Utilidad Antes de Impuestos</span> &nbsp;&nbsp;- &nbsp;&nbsp;Actualizado a Abril 2020 
+                                    <div class="card">
+                                        <div class="card-header p-0 position-relative">
+                                            <div class="position-absolute handle card-icon">
+                                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAh1BMVEVBaeH///8yYOC9yvTH0fU2YuA/Z+E5ZOD4+v5NdONIb+M3Y+Csue/y9f0vXt/6+/7P2Pfs8PxKcePc4/m5xvPr7/xDbOLk6fqzwPFWeeRph+fV3fjCzfSXq+6Sp+1ggeZ0kOh/mOqhs++In+tohuZyjuhcfuWVqO2Moeufse/Y4PivvPCCmuoqL+70AAAKrElEQVR4nO2daZeiOhCGk2gSEAmIuOCubdvdtv//911wBWXVKkJ75z1nzsx8MTwkqUoqoYrQOuQYxqDvznzfH4fy/Vl72u8ZRi1tE9yfN0bueH6YBFIpxRi/iLHw/0oEk8N87A5wSfEInb2/mJhScUsKQVIlhLS4Eub2w+87WM+BQ+hMNxPCmZWF9gDKOFn+uCidCU/o9DdbpXgptgQnV2q7mYJTAhPa7e/gCboYpfnR7oE+Eihhe90JR+azeGdIyYarNuCsBCN0pt+EydfoLpKMfE+hHgyIcNANFBDeGVLtugOQRwMhnB7I83MvS4KTD4iOBCD0dxy0+26SfNvWTmiPPQbefTcJFfgv+o/XCHtdE5PvyMgC/yXL+gqh8+vBT780xuVMD+EsqIPvzOjWTzj9VDXxHRnVelQvYe9bItnPLFnkx66R0Pesevki8eAp1/EM4WhS5wC9SbD1E4vy6oTOmNQ8QG+yPB+fcLDiuvhItJSr3I1VCduetg48yfIqzsZqhMZczwyMS7BFJaNaibA/0TlCr+LbKr6xCmG7o3mEXiSrjNQKhN1XAxRwErILT2h8M91ccbHvshuOsoT2ZyOm4E1sXdLelCQcLDUs0/LFP8shliPsBw2xMXFZu1ImtRTh3mwgYGhSgzKIZQj3TfES95JBH4Rw32mMl7iXNIsRiwmnzQWMfH8hYiFhg3swUnEvFhH2m2lkbio0NwWEjQcsRswnHDXRD95LBrmb4lxCe/kHAEPXv81DzCN0tAYsKsjKW8DlEDoffwQwXKOus3caOYSbPwMY7jTmTxDOwHcTQnKmoutCXIL7WD6uTNgnwE8hLXO9abVd1/U3h2UH/FQ16+wmi7C3g30CIVft+FFnb7Yqd52odANmxrF/BqGzhh2j1vIxduQuQSe6tapE2IW1MuyQZs6NBWjoh6VPxXTCKSyg+E1/j7QLOhVE6iI8ldAOQKeIzD5OaUG+SjlJu9SQSvgN2oV8kwkYOl3IgZraUhphG9TK8O8cQEpBF04y5YpRCmHPhByjwswFpMYOsDURPI7TFELY5SgruinShmyOPY7TR0IX1ITLz8Lo+wrSoA4ftsMPhKCjJiQsvggzVYDtWetCQtgdhViWOEBZQr5Tfr94uiccDQFbC9v7KQaEfakPxuaecA274H54o2lyIYfpg7EhmI2F07BE2J2OYFf5Ihm1uSPcQm9Ny5yADWBnhvWVQwjqm44qAQhNeOcxEo/ggFq1o3QQ8kUmYQv+qL7MaTs0IRHxTowTOuCzUMs8DGfiRwZhG74LddjSUCzWiXFC+FlYzh/ugV1U2ImxmRgjBF0fnlVqTTOGDz0Pbz4xRnhAOIYR2xKEwOuoSPx2Z+pG2ANvJlJ6dCihAcLpgdhdV6c3QuAA4lnWIpUqrgVGw+q68b4SOrD7wqsKO7GP0q6cPBDCbu3TmsrQJ84prLq82Sshhp05iuWb0x+kMzx+OW+7EPbwbubxrIh3pDHanc7hHaGPeHtUtDIB4TczVyk3SYg0G44SIuv40oc+pIxJfiQIbdwLwBmH0HPUc/SOHSdE2DclxFeP13pGyFc9zrHoMyFoVDZNcjhPMo7m2Hc65TpG2IPeoaXIIpMftz+wDbvXb/9MCP616tMwJbUM0pMEZyHWcEgkq+Xr05M1PRF+/InbXVVlza+EBuyZb1MkgivhCGHv2wSp3oUQb+mkV8y/ECJsshshuboQ6n4SNHXOhP03nYZhJ45OhAixroaItU+E7+kNI0UeMSJEitA0QGJyJDR0PweiPDsi7Dfu00I4sVFEOHtTfx9JzSLC+Rv3Id9EhJghGt2SHxEhrinteJ3O8c9ZXuKv6F+Yu+/QmBJqe4gtENayC2SgLjg8h9ABaheq4iNS1ACDsgnyqlQ7YZ/Q2XsTtgnSueGtBb2E3Cd0geoOtRP+EuQNvnbCLkEOdzeBcPLW3iIiRLgnFFMDCB3caHATCDuIv98MQsSfJ40gNHADbf8I6yDE3eE3gNDBPf5tAiHiz5N/hP8IX9f/Yx6+/aoN/lOnhJpA+P77Q9zTwyYQfr13nCYkxE0lpJuQ+QT5FF87oUvQLumfpJtQjQgdvTUhMwi1UcMYmgmF6WCfH+om3KKfAWsmlIeIEPXgQjPh6Rwf9e6lZkLmRoSo7kL3KD3ep+m9r6URpnG81waaNelOegnlJ/7dRL2El7uJmN+t6SWMPgzCviOsuQ/Pd4Qp4u5CK+Exk9qREPEYWCvh8RPEIyHiJlgrIWtdCBEnolbC2zcziN896SSMffeE6BF1Ep7yOZwI8S5C6yQ8tX0iHCC1oZfQi31DiucvNBKGu98YIVpIUSNh8ltutO/xNRIOE9/jowVr9BGeP1a/EmK9SH2ErJUktFFa0dqHRpIQy+lrI7wk/kDPMaSNUO3vCZHyROkiFMvLz99yfeG4RF2EtzICN0KcExpdhJ1rSspYzj2UfDiaCK1bqvsY4QBjH6yLcH/9+XjuS4wvL/QQRpHgNMIpwsvUQ6himeATWXYRLg9pIby5invC6ZsQJhpNJmuGn4k6COOz8J4Q/tN8LYSJSiV3CbfBO1ED4Tl6kUEIHhvWQZhMDHefNB06IWz9hPfJme8JYcvoaCAU3l2S9IfE98BbjNoJ2X35rAdCZwtqbOomTHqKVEK6B32ltffhQ2LmlPIMoDXJaiYsVe+J9jxAY1MvoQgeq02kldiArEBaLyFPqS6FXTuvVkKelgAeu/5hnYRil1YvJL0QDFxRJDZzjHw5PtSISa+AllHqBi5TescsElQGoBQ7mkNowPl9USSgduQkvWpPVrmi/vCPJeIT3mM+7VxCOvtj6SJF1ZrO4VT8U4nqYmVXShPSwx/qxVRPWEhoT/5MMj6+yq4NllcYDbr6OJrkNqc0WG7pt5H5JxDlLqOsejEh7UNuM7AkzQw/UYaQTpvvFkUnvxpRUYFCt+mIwtznExSWYHTBllUoEsOUUtzVCGkbsRbMyxKksKJyiTKaDR6owivqwVKEzUWURXOwLCF1O41ElF4JwHKEdOo10PVLs0wJ0JKEdBQ0DtFa5q1kKhPSwbJhy3D+2St+6iqE1EauP1VRbG0UP3M1QuosmrMlFqUquFYlpHTclOWNJPdHaECE1A0aMRl5UMZLPEVIByv9BVuE+ihpY54hpPSXaHYbcjgrfspXCGl/otWm8nU5L/gCITU2lrZulGRcphz9i4SU7rdMi1EVapIbr4AjDP1GR4NR5WZ2xVZwQjo41FLBMCYp5jkhQ3jC0DcuVY2MQn1W8YEghJT6Xl1WVbCgoouAIaT2ZlgHo2A7v7IFhSEMt43fAtvkCGaOy24jEAgjRtSqqUJ1fp8zMGCElPbmHSxGyZdPOQhgwnA+tiYW/GAVXByKY4XFgiAM1f8awq5zpPJ+nljApAiIMFyu+lvGgRasksm1+4L5TAiMMJQ9/iTsZUjJyGfrJeuZFCRhqEFrNVTPGx7Blbf2q+6P8gVMGMp2f5aKWZUphcXU7mf6om94FDxhJLu9CKI64yVDV0JyTnZfrUrRibLCIYxkT/3FxLQUt2QmqJAWV5a3O4z3gDMvKTzCo+yRO54fJiZXSjHG+FXh/5XV2a2+xu4IfGAmhEx4lmMM+lN31hr/drvjSH57OrINKIeQq/8A+GimO9PWH1QAAAAASUVORK5CYII=" height="15px"  data-toggle="tooltip" data-placement="top" title="Absorción del Objetivo: consta de tres indicadores clave que permiten medir el deseméño mes a la fecha, año a la fecha y el inventario de los últimos 180 días">
+                                            </div>
+                                        </div>
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="first-tab2" data-toggle="tab" href="#first2"
+                                                        role="tab" aria-controls="first" aria-selected="true">Mes a la Fecha</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="second-tab2" data-toggle="tab" href="#second2"
+                                                        role="tab" aria-controls="second2" aria-selected="false">Año a la Fecha</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="first2" role="tabpanel" aria-labelledby="first-tab2">
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div  >
+                                                                <div  >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Nacional</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Estado</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>CVP Ventas</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Total del Asesor de Ventas</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Experiencia de Pago</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Procesos de Entrega</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Seguimiento de Compromisos</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                 
+                                                </div>
+                                                <div class="tab-pane fade" id="second2" role="tabpanel" aria-labelledby="second-tab2">
+                                                  
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 mb-4">
+                                                            <div >
+                                                                <div >
+                                                                    <table class="data-table data-table-standard">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>&nbsp;</th>
+                                                                                <th>Distribuidor</th>
+                                                                                <th>Mercado</th>
+                                                                                <th>Nacional</th>
+                                                                                <th>Distrito</th>
+                                                                                <th>Estado</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>CVP Ventas</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Total del Asesor de Ventas</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Experiencia de Pago</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Procesos de Entrega</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Seguimiento de Compromisos</td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">4.55</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.71</span></td>
+                                                                                <td><span class="badge badge-pill badge-success mb-1">4.69</span></td>
+                                                                                <td><span class="badge badge-pill badge-warning mb-1">4.88</span></td>
+                                                                                <td><span class="badge badge-pill badge-danger mb-1">&nbsp;</span></td>
+                                                                            </tr>
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a id="cvpg"></a> 
+                                    <div class="mb-5"> &nbsp;</div>
+                                    <div class="row ventas-diarias-por-distribuidor">
+                                        <div class="col-xs-12">
+                                            <div class="card">
+                                                <div class="card-header p-0 position-relative">
+                                                    <div class="position-absolute handle card-icon">
+                                                        <img src="data:image/png;base64,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" height="15px"  data-toggle="tooltip" data-placement="top" title="Absorción del Objetivo: consta de tres indicadores clave que permiten medir el deseméño mes a la fecha, año a la fecha y el inventario de los últimos 180 días">
+                                                    </div>
+                                                </div>
+                                                <div class="card-header">
+                                                    <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="first-tab_cvp" data-toggle="tab" href="#first_cvp"
+                                                                role="tab" aria-controls="first" aria-selected="true">Últimos 3 Meses</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="second-tab_cvp" data-toggle="tab" href="#second_cvp"
+                                                                role="tab" aria-controls="second" aria-selected="false">Últimos 6 Meses</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="third-tab_cvp" data-toggle="tab" href="#third_cvp"
+                                                                role="tab" aria-controls="third" aria-selected="false">Últimos 12 Meses</a>
+                                                        </li>
+    
+                                                    </ul>
+                                                </div>
+                                                <div class="card-body"> 
+                                                  
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade show active" id="first_cvp" role="tabpanel" aria-labelledby="first-tab_cvp">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_ub1"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="second_cvp" role="tabpanel" aria-labelledby="second-tab_cvp">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_ub2"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="third_cvp" role="tabpanel" aria-labelledby="third-tab_cvp">
+                                                            <div class="row">
+                                                                <div class="tablas col-md-12" style="display: inline-block;">
+                                                                    <div class="card-body">
+                                                                        <div class="col-lg-12 mb-5">
+                                                                           
+                                                                            <div class="chart-container chart">
+                                                                                <canvas id="areaChart_ub3"></canvas>
+                                                                            </div>
+                                                                        </div>                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>   
+                                                  
+                                                </div>
+                                            </div>
+                                        </div>        
+                        
+                                    </div>
+                                 
+                            </div>
+                        </div>
+                    </div>    
+                    
+                </div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row gastos_totales ">              
+                </div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row gastos_ventas_totales ">              
+                </div>
+                <div class="mb-5"> &nbsp;</div>
+                <div class="row otros_ingresos_gastos ">              
+                </div>
+                <div class="mb-5"> &nbsp;</div>
+           
+            
+
 </div>
     </main>
 
@@ -1170,8 +1571,9 @@
     <script src="js/vendor/Chart.bundle.min.js"></script>
     <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
    
-    <script src="js/ventas.js"></script>
-  
+    <script src="js/vendor/datatables.min.js"></script>
+    <script src="js/rentabilidad.js"></script>
+
     <script src="js/scripts.js"></script>
 
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
@@ -1181,6 +1583,12 @@
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
     <script src="js/vendor/mousetrap.min.js"></script>
+    
+<script src='js/scrolls.js'></script>
+<script type="text/javascript">
+    scroller.init();
+    
+</script>
 </body>
 
 </html>
